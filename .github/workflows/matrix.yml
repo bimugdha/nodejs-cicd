@@ -33,8 +33,8 @@ jobs:
      
   
   report:
-  needs: test
-  if: faliure()
+    needs: test
+    if: faliure()
     runs-on: ubuntu-latest
     steps:
        - name: check the issue here
