@@ -33,7 +33,7 @@ jobs:
      
   
   report:
-    needs: test
+    needs: build
     if: failure()
     runs-on: ubuntu-latest
     steps:
