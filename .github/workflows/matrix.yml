@@ -34,7 +34,7 @@ jobs:
   
   report:
     needs: test
-    if: faliure()
+    if: failure()
     runs-on: ubuntu-latest
     steps:
        - name: check the issue here
