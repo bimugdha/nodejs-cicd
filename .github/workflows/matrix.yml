@@ -25,3 +25,19 @@ jobs:
           fi
       - name: Install npm
         run: npm install
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print status
+        run: echo "this is the printed status"
+     
+  
+  report:
+  needs: test
+  if: faliure()
+    runs-on: ubuntu-latest
+    steps:
+       - name: check the issue here
+         run: |
+         echo "something went wrong"
+         echo "${{toJSON(github)}}" 
