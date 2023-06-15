@@ -32,7 +32,7 @@ jobs:
       - name: Install npm
         run: npm install
   test:
-    runs-on: ubuntu-latest
+    runs-on: ./.github/workflows/reusable_workflow.yml
     steps:
       - name: Print status
         run: echo "this is the printed status"
